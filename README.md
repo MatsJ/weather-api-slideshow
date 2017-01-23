@@ -1,2 +1,2 @@
 # weather-api-slideshow
-A task as part of a job interview. I use data from openweathermap's api.
+A simple weather website showing current weather from Oslo, Rome, San Francisco.<br/> I use data from openweathermap's api.
