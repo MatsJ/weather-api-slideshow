@@ -1,0 +1,172 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  background-color: #E0E0E0;
+  max-height: 1024px;
+}
+
+/** Header START**/
+.header {
+  background-color: #000;
+  color: #FFF;
+}
+
+h1 {
+  font-family: 'Droid Serif', serif;
+  padding: 10px;
+  margin-left: 10%;
+}
+/** Header END **/
+
+/** Slideshow START **/
+.slideshow {
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 1080px;
+  position: relative;
+}
+
+/*style every <div> element where the parent is a .slideshow element*/
+.slideshow > div {
+  position: absolute;
+  z-index: 50;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.72);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.72);
+  //box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.72);
+}
+
+/* black opacity over image for better readability */
+.weather {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: absolute;
+  top: 0px;
+  z-index:100;
+  color: white;
+}
+
+/** making sure the images are at max width and height **/
+.cityimages {
+  width: 100%;
+  height: 100%;
+}
+
+/** Weather **/
+.city {
+  font-size: 80px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.weatherMsg {
+  font-size: 50px;
+  text-align: center;
+  font-style: italic;
+  font-weight: normal;
+  margin-top: -25px;
+}
+
+.weatherDesc {
+  font-size: 50px;
+  text-align: center;
+  margin-top: -8px;
+}
+
+.degrees {
+  font-size: 90px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: -30px;
+}
+
+.degrees:after {
+    content: "\2103"
+}
+
+a .tomorrow {
+  text-decoration: none;
+  float: right;
+  margin-right: 20px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  opacity: .8;
+}
+
+a .tomorrow:hover {
+  font-weight: bold;
+}
+/** Slideshow END **/
+
+
+/** MEDIA QUERIES **/
+@media screen and (min-width: 1920px) {
+  .slideshow {
+    max-width: 1440px;
+    max-height: 720px;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+        /**
+        Reduce the height of the slideshow to fit screen
+        reduce the width og slideshow to adapt to the height
+        **/
+        .slideshow {
+          height: 80%;
+          width: 70%;
+          margin-top: 10px;
+        }
+
+        /** reduce the font size of cityname **/
+        .city {
+          font-size: 50px;
+        }
+
+        .weatherMsg {
+          font-size: 24px;
+        }
+}
+
+@media screen and (min-width: 1366px) , screen and (min-height: 1024px) {
+  .slideshow {
+    height: 70%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slideshow {
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+  }
+  h1 {
+    margin-left: 5px;
+  }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 24px;
+  }
+  .weatherMsg {
+    font-size: 20px;
+  }
+  .weatherDesc {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .degrees {
+    font-size: 70px;
+    margin-top: 10px;
+  }
+}
+/** MEDIA QUERIES END **/

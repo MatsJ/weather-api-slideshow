@@ -1,0 +1,62 @@
+<html>
+
+  <head>
+    <title>Daily weather</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- droid serif font -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- sweetalertjs and css -->
+    <script src="sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  </head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <h1>Daily weathercheck</h1>
+    </div>
+
+      <!-- divs works as the slides because they can contain anything -->
+      <div class="slideshow">
+        <div>
+          <img class="cityimages" src="images/oslo.jpg">
+          <div class="weather">
+            <p class="city cityoslo"></p>
+            <p class="weatherMsg osloMsg"></p>
+            <p class="weatherDesc osloDesc"></p>
+            <p class="degrees osloDeg"></p>
+            <a href="#"><div class="tomorrow">TOMORROW</div></a>
+          </div>
+        </div>
+        <div>
+          <img class="cityimages" src="images/roma.jpg">
+          <div class="weather">
+            <p class="city cityrome"></p>
+            <p class="weatherMsg romeMsg"></p>
+            <p class="weatherDesc romeDesc"></p>
+            <p class="degrees romeDeg"></p>
+            <a href="#"><div class="tomorrow">TOMORROW</div></a>
+          </div>
+        </div>
+        <div>
+          <img class="cityimages" src="images/sf.jpg">
+          <div class="weather">
+            <p class="city citysf"></p>
+            <p class="weatherMsg sfMsg"></p>
+            <p class="weatherDesc sfDesc"></p>
+            <p class="degrees sfDeg"></p>
+            <a href="#"><div class="tomorrow">TOMORROW</div></a>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+  <!-- javascript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+  "Weatherfile": [
+    {
+      "ID": 1,
+      "City": "Oslo",
+      "Desc": "Sunny",
+      "Msg": "It's looking good today",
+      "Weather": "13",
+      "Image": "images/oslo.jpg"
+    },
+    {
+      "ID": 2,
+      "City": "Rome",
+      "Desc": "Rainy",
+      "Msg": "You might want to bring an umbrella today",
+      "Weather": "15",
+      "Image": "images/roma.jpg"
+    },
+    {
+      "ID": 3,
+      "City": "San Francisco",
+      "Desc": "Sunny",
+      "Msg": "It's looking good today",
+      "Weather": "22",
+      "Image": "images/sf.jpg"
+    }
+  ]
+}
