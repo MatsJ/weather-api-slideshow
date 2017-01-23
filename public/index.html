@@ -4,8 +4,9 @@
     <title>Daily weather</title>
     <!-- stylesheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- droid serif font -->
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- sweetalertjs and css -->
@@ -16,7 +17,7 @@
   <div class="container">
 
     <div class="header">
-      <h1>Daily weathercheck</h1>
+      <h1>Weathercheck<i class="fa fa-cloud" aria-hidden="true"></i></h1>
     </div>
 
       <!-- divs works as the slides because they can contain anything -->
@@ -25,7 +26,6 @@
           <img class="cityimages" src="images/oslo.jpg">
           <div class="weather">
             <p class="city cityoslo"></p>
-            <p class="weatherMsg osloMsg"></p>
             <p class="weatherDesc osloDesc"></p>
             <p class="degrees osloDeg"></p>
             <a href="#"><div class="tomorrow">TOMORROW</div></a>
@@ -35,7 +35,6 @@
           <img class="cityimages" src="images/roma.jpg">
           <div class="weather">
             <p class="city cityrome"></p>
-            <p class="weatherMsg romeMsg"></p>
             <p class="weatherDesc romeDesc"></p>
             <p class="degrees romeDeg"></p>
             <a href="#"><div class="tomorrow">TOMORROW</div></a>
@@ -45,7 +44,6 @@
           <img class="cityimages" src="images/sf.jpg">
           <div class="weather">
             <p class="city citysf"></p>
-            <p class="weatherMsg sfMsg"></p>
             <p class="weatherDesc sfDesc"></p>
             <p class="degrees sfDeg"></p>
             <a href="#"><div class="tomorrow">TOMORROW</div></a>
