@@ -7,7 +7,8 @@ function kelvinToCelsius(kelvin) {
   return celsius;
 }
 
-/** function getWeather START
+/**
+function getWeather START
 Get weather from openweathermap's API
 (doesnt work when api is down, which is allot..)
 Takes the API link as parameter
@@ -44,17 +45,17 @@ function getWeather(apiLink) {
 
 
 /* SLIDESHOW START */
-$(".slideshow > div:gt(0)").hide(); // begins at first div (0 index)
+$(".slideshow > div:gt(0)").hide(); // Select all elements at an index greater than index within the matched set.
 
-// goes through every image and changes image every 5 seconds
+// goes through every image and changes image every 4 seconds
 setInterval(function() {
   $('.slideshow > div:first')
     .fadeOut(1000)
-    .next()
+    .next() // makes sure it goes to next picture
     .fadeIn(1000)
     .end()
     .appendTo('.slideshow');
-},  5000);
+},  4000);
 /* SLIDESHOW END */
 
 
@@ -69,18 +70,41 @@ getWeather("http://api.openweathermap.org/data/2.5/weather?q=San Francisco,US&AP
 
 /* function calls END */
 
-/* sweetalert START
+/*
+weather tomorrow START
 Sweetalert is a simple way to make alert messages look good.
 Onclick for the tomorrow button
 */
 $( "a .tomorrow" ).click(function() {
+  //Oslo
+  $.getJSON('http://api.openweathermap.org/data/2.5/forecast/city?id=3143244&APPID=c90ad211e94c581eacdeef8e83f29bcb', function(result) {
+    var tempTomorrow = kelvinToCelsius(result.list[1].main.temp);
+    $('.osloTomorrow').append('<strong>'+tempTomorrow+'<span>&#8451</span></strong>');
+  });
+
+  //Roma
+  $.getJSON('http://api.openweathermap.org/data/2.5/forecast/city?id=3169070&APPID=c90ad211e94c581eacdeef8e83f29bcb', function(result) {
+    var romaTempTomorrow = kelvinToCelsius(result.list[1].main.temp);
+    $('.romaTomorrow').append('<strong>'+romaTempTomorrow+'<span>&#8451</span></strong>');
+  });
+
+  //SF
+  $.getJSON('http://api.openweathermap.org/data/2.5/forecast/city?id=5391959&APPID=c90ad211e94c581eacdeef8e83f29bcb', function(result) {
+  var sfTempTomorrow = kelvinToCelsius(result.list[1].main.temp);
+    $('.sfTomorrow').append('<strong>'+sfTempTomorrow+'<span>&#8451</span></strong>');
+  });
   swal({
-  title: "Weather for tomorrow",
-  text: "Oslo: <strong>16&#8451</strong><br/>"+ "Rome: <strong>18&#8451</strong><br/>" + "\n" + "San Francisco: <strong>20&#8451</strong><br/>",
-  html: true
-});
+    title: "Weather for tomorrow",
+    text: "Oslo: <span class='osloTomorrow'></span><br/>"+
+    "Rome: <span class='romaTomorrow'></span><br/>" + "\n" +
+    "San Francisco: <span class='sfTomorrow'></span><br/>",
+    html: true
+  });
 });
 /* sweetalert END */
+
+/* forecast link api down allot */
+
 
 /*
 USE THIS ON THE SHOWING IF API IS DOWN
@@ -89,10 +113,10 @@ $.getJSON('weather.json', function (data) {
       $.each(data.Weatherfile, function(key, val) {
         //Oslo
         if(val.ID === 1) {
-          //$('.cityoslo').append(result.name); UNCOMMENT IF API IS DOWN
-          //$('.osloDesc').append(val.Desc);
-          //$('.osloMsg').append(val.Msg);
-          //$('.osloDeg').append(val.Weather);
+          $('.cityoslo').append(result.name);
+          $('.osloDesc').append(val.Desc);
+          $('.osloMsg').append(val.Msg);
+          $('.osloDeg').append(val.Weather);
         }
         //Rome
         else if(val.ID === 2) {

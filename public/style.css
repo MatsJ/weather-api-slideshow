@@ -5,29 +5,35 @@ body {
   max-height: 1024px;
 }
 
-/** Header START**/
+/************
+Header START
+************/
 .header {
-  /*background-color: #F5DA55;*/
   background-color: #47b8e0;
   -webkit-box-shadow: 0px 6px 4px -4px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 6px 4px -4px rgba(0,0,0,0.75);
   box-shadow: 0px 6px 4px -4px rgba(0,0,0,0.75);
 }
 
+/** heading **/
 h1 {
   font-weight: 300;
   padding: 10px;
   margin-left: 10%;
-  /*color: #323330;*/
   color: #fff;
 }
 
+/** cloud icon **/
 h1 i {
   margin-left: 10px;
 }
-/** Header END **/
+/**********
+Header END
+**********/
 
-/** Slideshow START **/
+/**************
+Slideshow START
+***************/
 .slideshow {
   margin: 0 auto;
   margin-top: 20px;
@@ -41,7 +47,7 @@ h1 i {
   z-index: 50;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.72);
   -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.72);
-  //box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.72);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.72);
 }
 
 /* black opacity over image for better readability */
@@ -70,12 +76,14 @@ h1 i {
   letter-spacing: 2px;
 }
 
+/* Weather description p class */
 .weatherDesc {
   font-size: 50px;
   text-align: center;
   margin-top: -8px;
 }
 
+/* Temperature p class */
 .degrees {
   font-size: 90px;
   text-align: center;
@@ -83,10 +91,12 @@ h1 i {
   margin-top: -30px;
 }
 
+/* adds celsius symbol */
 .degrees:after {
     content: "\2103"
 }
 
+/** tomorrow button **/
 a .tomorrow {
   text-decoration: none;
   float: right;
@@ -96,16 +106,20 @@ a .tomorrow {
   border-radius: 8px;
   background-color: white;
   color: black;
-  opacity: .8;
+  opacity: .7;
 }
 
 a .tomorrow:hover {
   font-weight: bold;
 }
-/** Slideshow END **/
+/************
+Slideshow END
+*************/
 
 
-/** MEDIA QUERIES **/
+/**************
+MEDIA QUERIES
+**************/
 @media screen and (min-width: 1920px) {
   .slideshow {
     max-width: 1440px;
@@ -163,4 +177,6 @@ a .tomorrow:hover {
     margin-top: 10px;
   }
 }
-/** MEDIA QUERIES END **/
+/*****************
+MEDIA QUERIES END
+*****************/
